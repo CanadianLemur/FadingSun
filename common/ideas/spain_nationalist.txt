@@ -492,6 +492,8 @@ ideas={
 				always = no 
 				}
 				modifier = {
+				resistance_target = -0.1
+				experience_gain_army = 0.01
 				army_org_Factor = 0.15
 				army_core_defence_factor = 0.15
 				army_core_attack_factor = 0.15
@@ -529,8 +531,9 @@ ideas={
 				always = no 
 				}
 				modifier = {
+				communism_drift = 0.2
 				war_support_weekly = -0.005
-				conscription = -0.02
+				conscription = -0.05
 				}
 		}
 				
@@ -564,6 +567,8 @@ ideas={
 				}
 				modifier = {
 				consumer_goods_factor = 0.1
+				production_factory_max_efficiency_factor = -0.10
+				production_factory_efficiency_gain_factor = -0.10
 				}
 		}
 				
@@ -757,7 +762,8 @@ ideas={
 				}
 				modifier = {
 				navy_chief_cost_factor = -0.5
-				army_leader_start_level = 2
+				navy_leader_start_level = 2
+				production_speed_dockyard_factor = 0.10
 					}
 			}	
 			
@@ -818,8 +824,14 @@ ideas={
 				always = no 
 				}
 				modifier = {
-				industrial_capacity_factory = -0.05
+				army_attack_factor = 0.10
 					}
+				equipment_bonus = {
+					infantry_equipment = {
+						build_cost_ic = -0.05
+						instant = yes
+					}
+				}
 			}
 			
 				SPR_ww1_armasmodernas = {
@@ -832,8 +844,15 @@ ideas={
 				always = no 
 				}
 				modifier = {
-				industrial_capacity_factory = 0.1
+				army_attack_factor = 0.10
+				army_defence_factor = 0.10
 					}
+				equipment_bonus = {
+					infantry_equipment = {
+						build_cost_ic = -0.05
+						instant = yes
+					}
+				}
 			}
 				SPR_ww1_anarcoterroristas = {
 				picture = idea_cze_planning_bonus
@@ -936,6 +955,20 @@ ideas={
 					}
 			}
 					SPR_ww1_expedientepicaso = {
+				picture = idea_partisans
+				allowed = { 
+				original_tag = SPR 
+				always = no 
+				}
+				allowed_civil_war = { 
+				always = no 
+				}
+				modifier = {
+				resistance_target = -0.1
+				experience_gain_army = 0.01
+					}
+			}
+					SPR_ww1_gateway = {
 				picture = idea_cze_planning_bonus
 				allowed = { 
 				original_tag = SPR 
@@ -945,12 +978,37 @@ ideas={
 				always = no 
 				}
 				modifier = {
-				recon_factor = -0.15
-				supply_consumption_factor = 0.15
-				max_planning = -0.10
-				planning_speed = -0.30
+				consumer_goods_factor = -0.05
+				trade_opinion_factor = 0.2
 					}
-			}			
+			}
+		SPR_ww1_semanatragica2 = {
+				picture = idea_generic_army_problems
+				allowed = { 
+				original_tag = SPR 
+				always = no 
+				}
+				allowed_civil_war = { 
+				always = no 
+				}
+				modifier = {
+				war_support_weekly = -0.005
+				conscription = -0.02
+				}
+		}
+		SPR_ww1_semanatragica3 = {
+				picture = idea_generic_army_problems
+				allowed = { 
+				original_tag = SPR 
+				always = no 
+				}
+				allowed_civil_war = { 
+				always = no 
+				}
+				modifier = {
+				conscription = -0.02
+				}
+			}		
 	}
 
 }
