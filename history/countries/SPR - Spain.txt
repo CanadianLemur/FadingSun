@@ -77,6 +77,7 @@ set_convoys = 150
 		SPR_ww1_turnismo
 		SPR_ww1_caciquismo
 		SPR_ww1_uniones
+		SPR_ww1_semanatragica
 	}	
 }	
 

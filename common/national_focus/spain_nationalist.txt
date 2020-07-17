@@ -116,6 +116,7 @@ continuous_focus_position = { x = 4500 y = 10 }
   completion_reward = {
   add_ideas = SPR_ww1_flota 
   168 = { add_extra_state_shared_building_slots = 3 add_building_construction = { type = dockyard level = 3 instant_build = yes  } }
+   add_ideas = SPR_ww1_ferrol
   }
 }
 
@@ -186,7 +187,8 @@ continuous_focus_position = { x = 4500 y = 10 }
   available_if_capitulated = yes  
  completion_reward = {
  
- add_ideas = SPR_ww1_semanatragica
+ remove_ideas = SPR_ww1_semanatragica
+ add_ideas = SPR_ww1_semanatragica2
  add_stability = -0.25 
  add_popularity = {  
  ideology = fascism_ideology  
@@ -291,23 +293,18 @@ continuous_focus_position = { x = 4500 y = 10 }
  x =7 
  y =3 
  mutually_exclusive = { } 
- available = {date > 1912.3.30}
+ available = { owns_state = 290}
  prerequisite = { focus = expedientepicaso} 
  prerequisite = { focus = lasemanatragica}  
  cost = 10
   available_if_capitulated = yes
 completion_reward = {
-	ENG = { add_manpower = -25000}
-	FRA = {	add_manpower = -25000}
-	SPR = {	add_manpower = -20000}
-	MOR = {	add_manpower = -30000}
 	add_opinion_modifier = { target = GER modifier =  tratadofez.1}
 	add_opinion_modifier = { target = ENG modifier =  tratadofez.1}
 	add_opinion_modifier = { target = FRA modifier =  tratadofez.1}
-	SPR = {add_state_core = 290 }
-	290 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes  } } 
-
- }  
+	290 = { add_extra_state_shared_building_slots = 2 add_building_construction = { type = industrial_complex level = 1 instant_build = yes  } } 
+	add_ideas = SPR_ww1_gateway
+	}  
  }
  
  #Focus for Reformando el ejercito 
@@ -324,7 +321,10 @@ completion_reward = {
 
  cost = 10
   available_if_capitulated = yes  
-  completion_reward = {remove_ideas = SPR_ww1_quintas}
+  completion_reward = {
+	remove_ideas = SPR_ww1_quintas
+	remove_ideas = SPR_ww1_semanatragica2
+	add_ideas = SPR_ww1_semanatragica3 }
  }
  
  #Focus for Junta Ampliacion Estudios 
@@ -386,11 +386,13 @@ completion_reward = {
  prerequisite = { focus = ile} 
  cost = 10
    completion_reward = { 
- 165 = { add_building_construction = { type = infrastructure level = 2 instant_build = yes  } } 
- 167 = { add_building_construction = { type = infrastructure level = 2 instant_build = yes  } } 
- 169 = { add_building_construction = { type = infrastructure level = 2 instant_build = yes  } } 
- 172 = { add_building_construction = { type = infrastructure level = 2 instant_build = yes  } } 
-
+ 165 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes  } } 
+ 166 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes  } } 
+ 167 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes  } } 
+ 169 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes  } } 
+ 172 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes  } } 
+ 808 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes  } } 
+ 810 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes  } } 
    }
   available_if_capitulated = yes  
  }
@@ -499,7 +501,7 @@ completion_reward = {
     remove_ideas = SPR_ww1_generacion98	
 	remove_ideas = SPR_ww1_industria
 	remove_ideas = neutrality_idea
-	remove_ideas = SPR_ww1_semanatragica
+	remove_ideas = SPR_ww1_semanatragica3
 
 	}
  }
@@ -573,7 +575,6 @@ completion_reward = {
  cost = 40
   available_if_capitulated = yes
    completion_reward = {
-   	add_ideas = SPR_ww1_ferrol
 	add_ideas = SPR_ww1_legion
 	remove_ideas = SPR_ww1_expedientepicaso
 	add_war_support = 0.15
@@ -743,7 +744,8 @@ focus = {
 	completion_reward = { 
 	add_resource = { type = wood amount = 48 state = 166n}
 	add_resource = { type = coal amount = 24 state = 172n}
-	add_timed_idea = { idea = SPR_ww1_inversion days = 90}
+	add_timed_idea = { idea = SPR_ww1_+
+	days = 90}
 	}
  }
  focus = { 
